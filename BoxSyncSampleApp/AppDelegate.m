@@ -11,28 +11,57 @@
 
 #import "ViewController.h"
 
+static NSString *const REFRESH_TOKEN_KEY = @"REFRESH_TOKEN_KEY";
+
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [self configureBoxSDK];
 
     [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(boxUserDidAuthenticate:)
+                                                 name:BoxOAuth2SessionDidBecomeAuthenticatedNotification
+                                               object:[BoxSDK sharedSDK].OAuth2Session];
+    [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(boxAPITokensDidRefresh:)
                                                  name:BoxOAuth2SessionDidBecomeAuthenticatedNotification
                                                object:[BoxSDK sharedSDK].OAuth2Session];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(boxAPITokensDidRefresh:)
+                                                 name:BoxOAuth2SessionDidRefreshTokensNotification
+                                               object:[BoxSDK sharedSDK].OAuth2Session];
 
-
-    UIViewController *authorizationController = [[BoxAuthorizationViewController alloc] initWithAuthorizationURL:[[BoxSDK sharedSDK].OAuth2Session authorizeURL]
-                                                                                                     redirectURI:nil];
 
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.rootViewController = authorizationController;
+
+    NSString *storedRefreshToken = [[NSUserDefaults standardUserDefaults] objectForKey:REFRESH_TOKEN_KEY];
+    if (storedRefreshToken) {
+        [BoxSDK sharedSDK].OAuth2Session.refreshToken = storedRefreshToken;
+        [self showFilesView];
+    }
+    else {
+        UIViewController *authorizationController = [[BoxAuthorizationViewController alloc] initWithAuthorizationURL:[[BoxSDK sharedSDK].OAuth2Session authorizeURL]
+                                                                                                         redirectURI:nil];
+        self.window.rootViewController = authorizationController;
+    }
+
     [self.window makeKeyAndVisible];
     return YES;
 }
 
-- (void)boxAPITokensDidRefresh:(id)boxAPITokensDidRefresh {
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    [[BoxSDK sharedSDK].OAuth2Session performAuthorizationCodeGrantWithReceivedURL:url];
+    return YES;
+}
+
+- (void)boxUserDidAuthenticate:(id)boxUserDidAuthenticate {
     [self showFilesView];
+}
+
+- (void)boxAPITokensDidRefresh:(id)boxAPITokensDidRefresh {
+    [[NSUserDefaults standardUserDefaults] setObject:[BoxSDK sharedSDK].OAuth2Session.refreshToken
+                                              forKey:REFRESH_TOKEN_KEY];
+    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 - (void)configureBoxSDK {
@@ -41,20 +70,8 @@
     [BoxSDK sharedSDK].OAuth2Session.clientSecret = @"YOUR_CLIENT_SECRET";
 }
 
-- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
-    [[BoxSDK sharedSDK].OAuth2Session performAuthorizationCodeGrantWithReceivedURL:url];
-    return YES;
-}
-
-
 - (void)showFilesView {
-    ViewController *viewController = nil;
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        viewController = [[ViewController alloc] initWithNibName:@"ViewController_iPhone" bundle:nil];
-    } else {
-        viewController = [[ViewController alloc] initWithNibName:@"ViewController_iPad" bundle:nil];
-    }
-
+    ViewController *viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
     self.window.rootViewController = viewController;
 }
 

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19656588E8AD2902E1B7DDBD /* FileDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 1965698511C481124C629AC5 /* FileDownloader.m */; };
+		196568815E602BE82FB3DCD1 /* ProgressTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 19656DC73F8C9E71C1B3836F /* ProgressTableViewCell.m */; };
+		19656BC8A72DBBB1495DCF15 /* FilePreviewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 1965677ACC61F7C7F600A3C7 /* FilePreviewDataSource.m */; };
+		19656FBB119897A44607EBD0 /* SyncableFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 19656F5D6B677CD508264953 /* SyncableFile.m */; };
 		3C0E386C17B2E95900B985A1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C0E386B17B2E95900B985A1 /* UIKit.framework */; };
 		3C0E386E17B2E95900B985A1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C0E386D17B2E95900B985A1 /* Foundation.framework */; };
 		3C0E387017B2E95900B985A1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C0E386F17B2E95900B985A1 /* CoreGraphics.framework */; };
@@ -17,11 +21,11 @@
 		3C0E388017B2E95900B985A1 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C0E387F17B2E95900B985A1 /* Default@2x.png */; };
 		3C0E388217B2E95900B985A1 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C0E388117B2E95900B985A1 /* Default-568h@2x.png */; };
 		3C0E388517B2E95900B985A1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C0E388417B2E95900B985A1 /* ViewController.m */; };
-		3C0E388817B2E95900B985A1 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C0E388617B2E95900B985A1 /* ViewController_iPhone.xib */; };
-		3C0E388B17B2E95900B985A1 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C0E388917B2E95900B985A1 /* ViewController_iPad.xib */; };
+		3C0E388817B2E95900B985A1 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C0E388617B2E95900B985A1 /* ViewController.xib */; };
 		3C0E389D17B2EEAE00B985A1 /* libBoxSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C0E389817B2EE7200B985A1 /* libBoxSDK.a */; };
 		3C0E38A117B2EF4F00B985A1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C0E38A017B2EF4F00B985A1 /* QuartzCore.framework */; };
 		3C0E38A317B2EF5400B985A1 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C0E38A217B2EF5400B985A1 /* Security.framework */; };
+		3C0E38C317B5A6DD00B985A1 /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C0E38C217B5A6DD00B985A1 /* QuickLook.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +60,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		196566BB677CB2CDDF6EDAD0 /* FilePreviewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilePreviewDataSource.h; sourceTree = "<group>"; };
+		1965677ACC61F7C7F600A3C7 /* FilePreviewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilePreviewDataSource.m; sourceTree = "<group>"; };
+		1965698511C481124C629AC5 /* FileDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileDownloader.m; sourceTree = "<group>"; };
+		1965699E5072ABF9CF537E50 /* ProgressTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressTableViewCell.h; sourceTree = "<group>"; };
+		196569DB77E27DE475AE50C9 /* SyncableFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SyncableFile.h; sourceTree = "<group>"; };
+		19656C6847FBF7035CA55242 /* FileDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileDownloader.h; sourceTree = "<group>"; };
+		19656DC73F8C9E71C1B3836F /* ProgressTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressTableViewCell.m; sourceTree = "<group>"; };
+		19656F5D6B677CD508264953 /* SyncableFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SyncableFile.m; sourceTree = "<group>"; };
 		3C0E386817B2E95900B985A1 /* BoxSyncSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoxSyncSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C0E386B17B2E95900B985A1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3C0E386D17B2E95900B985A1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -71,11 +83,11 @@
 		3C0E388117B2E95900B985A1 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		3C0E388317B2E95900B985A1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		3C0E388417B2E95900B985A1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		3C0E388717B2E95900B985A1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
-		3C0E388A17B2E95900B985A1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+		3C0E388717B2E95900B985A1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
 		3C0E389117B2EE7200B985A1 /* BoxSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BoxSDK.xcodeproj; path = "../box-ios-sdk-v2/BoxSDK.xcodeproj"; sourceTree = "<group>"; };
 		3C0E38A017B2EF4F00B985A1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		3C0E38A217B2EF5400B985A1 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		3C0E38C217B5A6DD00B985A1 /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = System/Library/Frameworks/QuickLook.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C0E38C317B5A6DD00B985A1 /* QuickLook.framework in Frameworks */,
 				3C0E387017B2E95900B985A1 /* CoreGraphics.framework in Frameworks */,
 				3C0E386E17B2E95900B985A1 /* Foundation.framework in Frameworks */,
 				3C0E38A117B2EF4F00B985A1 /* QuartzCore.framework in Frameworks */,
@@ -98,8 +111,6 @@
 		3C0E385F17B2E95900B985A1 = {
 			isa = PBXGroup;
 			children = (
-				3C0E38A217B2EF5400B985A1 /* Security.framework */,
-				3C0E38A017B2EF4F00B985A1 /* QuartzCore.framework */,
 				3C0E389117B2EE7200B985A1 /* BoxSDK.xcodeproj */,
 				3C0E387117B2E95900B985A1 /* BoxSyncSampleApp */,
 				3C0E386A17B2E95900B985A1 /* Frameworks */,
@@ -118,6 +129,9 @@
 		3C0E386A17B2E95900B985A1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3C0E38C217B5A6DD00B985A1 /* QuickLook.framework */,
+				3C0E38A217B2EF5400B985A1 /* Security.framework */,
+				3C0E38A017B2EF4F00B985A1 /* QuartzCore.framework */,
 				3C0E386B17B2E95900B985A1 /* UIKit.framework */,
 				3C0E386D17B2E95900B985A1 /* Foundation.framework */,
 				3C0E386F17B2E95900B985A1 /* CoreGraphics.framework */,
@@ -132,9 +146,16 @@
 				3C0E387B17B2E95900B985A1 /* AppDelegate.m */,
 				3C0E388317B2E95900B985A1 /* ViewController.h */,
 				3C0E388417B2E95900B985A1 /* ViewController.m */,
-				3C0E388617B2E95900B985A1 /* ViewController_iPhone.xib */,
-				3C0E388917B2E95900B985A1 /* ViewController_iPad.xib */,
+				3C0E388617B2E95900B985A1 /* ViewController.xib */,
 				3C0E387217B2E95900B985A1 /* Supporting Files */,
+				1965698511C481124C629AC5 /* FileDownloader.m */,
+				19656C6847FBF7035CA55242 /* FileDownloader.h */,
+				19656DC73F8C9E71C1B3836F /* ProgressTableViewCell.m */,
+				1965699E5072ABF9CF537E50 /* ProgressTableViewCell.h */,
+				19656F5D6B677CD508264953 /* SyncableFile.m */,
+				196569DB77E27DE475AE50C9 /* SyncableFile.h */,
+				1965677ACC61F7C7F600A3C7 /* FilePreviewDataSource.m */,
+				196566BB677CB2CDDF6EDAD0 /* FilePreviewDataSource.h */,
 			);
 			path = BoxSyncSampleApp;
 			sourceTree = "<group>";
@@ -249,8 +270,7 @@
 				3C0E387E17B2E95900B985A1 /* Default.png in Resources */,
 				3C0E388017B2E95900B985A1 /* Default@2x.png in Resources */,
 				3C0E388217B2E95900B985A1 /* Default-568h@2x.png in Resources */,
-				3C0E388817B2E95900B985A1 /* ViewController_iPhone.xib in Resources */,
-				3C0E388B17B2E95900B985A1 /* ViewController_iPad.xib in Resources */,
+				3C0E388817B2E95900B985A1 /* ViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +284,10 @@
 				3C0E387817B2E95900B985A1 /* main.m in Sources */,
 				3C0E387C17B2E95900B985A1 /* AppDelegate.m in Sources */,
 				3C0E388517B2E95900B985A1 /* ViewController.m in Sources */,
+				19656588E8AD2902E1B7DDBD /* FileDownloader.m in Sources */,
+				196568815E602BE82FB3DCD1 /* ProgressTableViewCell.m in Sources */,
+				19656FBB119897A44607EBD0 /* SyncableFile.m in Sources */,
+				19656BC8A72DBBB1495DCF15 /* FilePreviewDataSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,20 +310,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		3C0E388617B2E95900B985A1 /* ViewController_iPhone.xib */ = {
+		3C0E388617B2E95900B985A1 /* ViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				3C0E388717B2E95900B985A1 /* en */,
 			);
-			name = ViewController_iPhone.xib;
-			sourceTree = "<group>";
-		};
-		3C0E388917B2E95900B985A1 /* ViewController_iPad.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3C0E388A17B2E95900B985A1 /* en */,
-			);
-			name = ViewController_iPad.xib;
+			name = ViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -371,6 +387,7 @@
 				INFOPLIST_FILE = "BoxSyncSampleApp/BoxSyncSampleApp-Info.plist";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -383,6 +400,7 @@
 				INFOPLIST_FILE = "BoxSyncSampleApp/BoxSyncSampleApp-Info.plist";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

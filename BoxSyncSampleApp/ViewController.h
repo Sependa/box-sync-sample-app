@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@class FileDownloader;
+@class SyncableFile;
+
+
 @interface ViewController : UITableViewController
+
+@property(nonatomic, strong) NSArray *syncFiles;
+@property(nonatomic, strong) FileDownloader *fileDownloader;
+
+- (void)updateFile:(SyncableFile *)file downloadProgress:(float)progress;
 
 @end
